@@ -1,0 +1,77 @@
+.socicon-colors(@color) {
+
+	& when (@socicon-brand-color-bool) {
+
+		& when (@socicon-container-style-option-obb = none) {
+			color: @color;
+		}
+
+		& when not (@socicon-container-style-option-obb = none) {
+			background-color: @color;
+			color: #fff;
+		}
+	}
+}
+
+.socicon-when-not-brand-color-and-no-style-color(@color) {
+
+	.socicon when not (@socicon-brand-color-bool) and (@socicon-container-style-option-obb = none) {
+
+		i {
+			// apply container context based color only when the color is not specified by user
+			& when (@socicon-color-obb = auto) {
+				color: @color;
+			}
+			// apply user color to override container-specific color rule
+			& when not (@socicon-color-obb = auto) {
+				color: @socicon-color-obb;
+			}
+		}
+	}
+}
+
+// mixin that changes background color even when there's no background style applied
+.socicon-when-not-brand-color-hover(@hover-bg, @hover-color) {
+
+	.socicon when not (@socicon-brand-color-bool) {
+
+		&:hover,
+		&:active {
+
+			i {
+				background-color: @hover-bg;
+				color: @hover-color;
+			}
+		}
+	}
+}
+
+// mixin that changes background color when there's a background style applied
+.socicon-when-not-brand-color-and-with-style-hover-bg(@hover-bg) {
+
+	.socicon when not (@socicon-brand-color-bool) and not (@socicon-container-style-option-obb = none) {
+
+		&:hover,
+		&:active {
+
+			i {
+				background-color: @hover-bg;
+			}
+		}
+	}
+}
+
+// mixin that changes color when there's no background style applied
+.socicon-when-not-brand-color-and-no-style-hover-color(@hover-color) {
+
+	.socicon when not (@socicon-brand-color-bool) and (@socicon-container-style-option-obb = none) {
+
+		&:hover,
+		&:active {
+
+			i {
+				color: @hover-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.socicon {
+	text-align: center;
+
+	i {
+		display: inline-block;
+		width: @socicon-width-obb;
+		height: @socicon-height-obb;
+		line-height: 0;
+		vertical-align: middle;
+		font-family: socicon !important;
+		font-size: @socicon-font-size-obb;
+		font-style: normal;
+		text-transform: none;
+		transition: @socicon-transition-obb;
+
+		&:before {
+			line-height: @socicon-height-obb;
+		}
+
+		& when not (@socicon-brand-color-bool) {
+
+			& when (@socicon-color-obb = auto) {
+				color: @socicon-color-auto-obb;
+			}
+			& when not (@socicon-color-obb = auto) {
+				color: @socicon-color-obb;
+			}
+
+			& when not (@socicon-container-style-option-obb = none) {
+				background-color: @socicon-bg-obb;
+			}
+		}
+
+		& when (@socicon-container-style-option-obb = none) { border-radius: @border-radius-base; }
+		& when (@socicon-container-style-option-obb = circle) { border-radius: 50%; }
+		& when (@socicon-container-style-option-obb = rounded-corners) { border-radius: @socicon-container-border-radius-obb; }
+		& when (@socicon-container-style-option-obb = square) { border-radius: 0; }
+	}
+
+	&:hover,
+	&:active {
+
+		i {
+			& when (@socicon-animation-option-obb = spin) {
+				transform: scale(1.1) rotate(360deg);
+			}
+			& when (@socicon-animation-option-obb = zoom) {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+a.socicon {
+	text-decoration: none;
+}
