@@ -1,16 +1,35 @@
+[class^="socicon-"],
+[class*=" socicon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'Socicon' !important;
+	speak: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// icon container
 .socicon {
 	text-align: center;
 
+	// the icon itself that contains the `socicon-*` class
 	i {
 		display: inline-block;
 		width: @socicon-width-obb;
 		height: @socicon-height-obb;
 		line-height: 0;
 		vertical-align: middle;
-		font-family: socicon !important;
+
 		font-size: @socicon-font-size-obb;
-		font-style: normal;
 		text-transform: none;
+
+		speak: none;
 		transition: @socicon-transition-obb;
 
 		&:before {

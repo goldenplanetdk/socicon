@@ -1,15 +1,16 @@
-@socicon-dir-url: '/node-modules/socicon/font';
+@socicon-dir-url: '/node-modules/@goldenplanet/socicon/fonts';
 
 @socicon-version: ~'3.5.2';
 
 @font-face {
-	font-family: 'socicon';
-	src: url('@{socicon-dir-url}/socicon.eot?v=@{socicon-version}');
-	src: url('@{socicon-dir-url}/socicon.eot?#iefix&v=@{socicon-version}') format('embedded-opentype'),
-	url('@{socicon-dir-url}/socicon.woff?v=@{socicon-version}') format('woff'),
-	url('@{socicon-dir-url}/socicon.ttf?v=@{socicon-version}') format('truetype'),
-	url('@{socicon-dir-url}/socicon.svg?v=@{socicon-version}#sociconregular') format('svg');
-	font-weight: normal;
+	font-family: 'Socicon';
 	font-style: normal;
-}
+	font-weight: normal;
 
+	src: url('@{socicon-dir-url}/Socicon.eot?v=@{socicon-version}');
+	src: url('@{socicon-dir-url}/Socicon.eot?v=@{socicon-version}#iefix') format('embedded-opentype'),
+		 url('@{socicon-dir-url}/Socicon.woff2?v=@{socicon-version}') format('woff2'),
+		 url('@{socicon-dir-url}/Socicon.ttf?v=@{socicon-version}') format('truetype'),
+		 url('@{socicon-dir-url}/Socicon.woff?v=@{socicon-version}') format('woff'),
+		 url('@{socicon-dir-url}/Socicon.svg?v=@{socicon-version}#Socicon') format('svg');
+}
