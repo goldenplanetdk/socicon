@@ -1,4 +1,6 @@
-# socicon
+![socicon logo](http://www.socicon.com/static/img/logo.svg)
+
+# socicon font
 
 Social icons font is downloaded from http://www.socicon.com/download.php
 Based on `v3.5.2`  *v2017.05*
